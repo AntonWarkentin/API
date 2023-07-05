@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using RestSharp;
 
 namespace Home_16.Clients
@@ -28,7 +27,7 @@ namespace Home_16.Clients
 
         public RestResponse Execute(RestRequest request)
         {
-            var response = restClient.Execute(request);
+            var response = restClient.Execute<RestRequest>(request);
             return response;
         }
 

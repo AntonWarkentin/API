@@ -47,7 +47,7 @@ namespace Home_16.APITests
             Assert.IsTrue(response.StatusCode.Equals(HttpStatusCode.OK));
         }
 
-        [Test]
+        [Test, Order(2)]
         public void GrantAccessToProject()
         {
             var member = new MemberModel()
@@ -64,7 +64,7 @@ namespace Home_16.APITests
             Assert.That(projectMemberPair.MemberId, Is.EqualTo(member.Id));
         }
         
-        [Test]
+        [Test, Order(1)]
         public void RevokeAccessToProject()
         {
             var member = new MemberModel()
