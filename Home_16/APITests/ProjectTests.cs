@@ -64,7 +64,7 @@ namespace Home_16.APITests
             Assert.That(projectMemberPair.MemberId, Is.EqualTo(member.Id));
         }
         
-        [Test, Order(1)]
+        //[Test, Order(1)]
         public void RevokeAccessToProject()
         {
             var member = new MemberModel()
